@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block bodyId %}welcomePage{% endblock %}
+
+{% block headerContent %}
+<p id="name">{{ logged_user.prenom }} {{ logged_user.nom }}</p>
+<p id="function">
+  {% if logged_user.type_de_personne == 'student' %}
+  Étudiant en 
+    {% if logged_user.annee == 1 %}
+      {{ logged_user.annee }}ère
+    {% else %}
+      {{ logged_user.annee }}ème
+    {% endif %}
+    {{ logged_user.cursus.intitule }}
+  {% else %}
+    {{ logged_user.fonction.intitule|capfirst }} 
+    dans la faculté {{ logged_user.faculte }}
+  {% endif %}
+</p>
+<p id="profileLinks">
+  <a href="showProfile?userToShow={{ logged_user.id }}" class="buttonLink">Voir le profil</a>
+  <a href="modifyProfile" class="buttonLink">Modifier le profil</a>
+</p>
+{% endblock %}
+
+{% block content %}
+<section id="messageList">
+  <form action="welcome" method="get" class="inlineForm">
+    <label for="newMessageInput">Publier un message :</label> 
+    <input type="text" name="newMessage" id="newMessageInput" />
+    <input type="submit" value="Publier" />
+  </form>
+  <ul>
+    {% for message in friendMessages %}
+    <li>
+      <p><a href="showProfile?userToShow={{ message.auteur.id }}">{{ message.auteur.prenom }} {{ message.auteur.nom }}</a> dit :</p>
+      <p>{{ message.contenu }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $("#friendList form").submit(addFriend);
+  });
+  
+  function addFriend()
+  {
+    $fieldValue = $("#newFriendInput").val();
+    $.ajax({
+      url: '/ajax/addFriend',
+      data: ({email : $fieldValue}) ,
+      type: 'GET',
+      success: function($data, $textStatus, $XMLHttpRequest) {  
+          if ($data != '')
+          {
+            $('#friendList ul').prepend($data);
+          }
+        }
+      }
+    );
+    return false;
+  }
+</script>
+
+<section id="friendList">
+  <p class="title">Mes amis</p>
+  <form action="welcome" method="get" class="inlineForm">
+    <input type="email" name="newFriend" id="newFriendInput" placeholder="Courriel" />
+    <input type="submit" value="Ajouter" />
+  </form>
+  <ul>
+  {% for ami in logged_user.amis.all %}
+    <li><a href="showProfile?userToShow={{ ami.id }}">{{ ami.prenom }} {{ ami.nom }}</a></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}

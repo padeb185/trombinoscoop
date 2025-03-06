@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Affichage d’un profil{% endblock %}
+
+{% block bodyId %}showProfilePage{% endblock %}
+
+{% block content %}
+<h1>Affichage d’un profil</h1>
+<dl class="fieldList">
+  <dt>Nom :</dt>
+    <dd>{{ user_to_show.nom }}</dd>
+  <dt>Prénom :</dt>
+    <dd>{{ user_to_show.prenom }}</dd>
+  <dt>Date de naissance :</dt>
+    <dd>{{ user_to_show.date_de_naissance }}</dd>
+  <dt>Matricule :</dt>
+    <dd>{{ user_to_show.matricule }}</dd>
+  <dt>Courriel :</dt>
+    <dd>{{ user_to_show.courriel }}</dd>
+  <dt>Tél. fixe :</dt>
+    <dd>{{ user_to_show.tel_fixe }}</dd>
+  <dt>Tél. mobile :</dt>
+    <dd>{{ user_to_show.tel_mobile }}</dd>
+  <dt>Faculté :</dt>
+    <dd>{{ user_to_show.faculte.nom }}</dd>
+{% if user_to_show.type_de_personne == "student" %}
+  <dt>Cursus :</dt>
+    <dd>{{ user_to_show.cursus.intitule }}</dd>
+  <dt>Année :</dt>
+    <dd>{{ user_to_show.annee }}</dd>
+{% elif user_to_show.type_de_personne == "employee" %}
+  <dt>Bureau :</dt>
+    <dd>{{ user_to_show.bureau }}</dd>
+  <dt>Campus :</dt>
+    <dd>{{ user_to_show.campus.nom }}</dd>
+  <dt>Fonction :</dt>
+    <dd>{{ user_to_show.fonction.intitule }}</dd>
+{% endif %}
+</dl>
+<p id="showProfileNavigationButtons">
+  <a href="welcome" class="buttonLink">Retour</a>
+</p>
+{% endblock %}

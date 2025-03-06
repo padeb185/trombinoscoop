@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Création d’un profil{% endblock %}
+
+{% block bodyId %}userProfilePage{% endblock %}
+
+{% block content %}
+
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $("input#id_courriel").focusout(checkEmailField);
+  });
+  
+  function checkEmailField()
+  {
+    $fieldValue = $("input#id_courriel").val();
+    $.ajax({
+      url: '/ajax/checkEmailField',
+      data: ({value : $fieldValue}) ,
+      type: 'GET',
+      success: function($data, $textStatus, $XMLHttpRequest) {
+          if ($data != '')
+          {
+            $("input#id_courriel").parent().prev('.errorlist').remove();
+            $("input#id_courriel").parent().before($data);
+          }
+        }
+      }
+    )
+  }
+
+</script>
+
+<h1>Création d’un compte</h1>
+<form action="register" method="get">
+  {{ form.as_p }}
+  <p>
+    <input type="submit" value="Créer un compte" />
+  </p>
+</form>
+{% endblock %}

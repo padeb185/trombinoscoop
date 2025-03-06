@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Trombinoscoop – {% block title %}Bienvenue{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  </head>
+  <body id="{% block bodyId %}genericPage{% endblock %}">
+    <header>
+    {% block headerContent %}{% endblock %}
+    </header>
+    <section id="content">
+    {% block content %}{% endblock %}
+    </section>
+  </body>
+</html>
