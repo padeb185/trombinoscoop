@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
-from Trombinoscoop.models import Personne, Etudiant, Employe
+from trombinoscoop.models import Personne, Etudiant, Employe
 
 
 class LoginForm(forms.Form):

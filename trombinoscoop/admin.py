@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Trombinoscoop.models import Faculte, Campus, Fonction, Cursus, Employe, Etudiant, Message
+from trombinoscoop.models import Faculte, Campus, Fonction, Cursus, Employe, Etudiant, Message
 
 
 admin.site.register(Faculte)

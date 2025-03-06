@@ -7,10 +7,10 @@ from django import forms
 import datetime
 
 # Import des formulaires de l'application locale
-from .forms import LoginForm, StudentProfileForm, EmployeeProfileForm, AddFriendForm
+from trombinoscoop.forms import LoginForm, StudentProfileForm, EmployeeProfileForm, AddFriendForm
 
 # Import des modèles de l'application locale
-from models import Personne, Etudiant, Employe, Message
+from trombinoscoop.models import Personne, Etudiant, Employe, Message
 
 
 def get_logged_user_from_request(request):
