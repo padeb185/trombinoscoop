@@ -49,4 +49,3 @@ class StudentProfileForm(forms.ModelForm):
 class EmployeeProfileForm(forms.ModelForm):
     class Meta:
         model = Employe
-        exclude = ('amis',)

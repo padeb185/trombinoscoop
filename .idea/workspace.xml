@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bc2529c-e598-4eb9-8dc8-d48c7b0994aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Trombinoscoop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trombinoscoop/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trombinoscoop/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trombinoscoop/models" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trombinoscoop/views.py" afterDir="false" />
+    <list default="true" id="3bc2529c-e598-4eb9-8dc8-d48c7b0994aa" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trombinoscoop/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/trombinoscoop/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trombinoscoop/models" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trombinoscoop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/trombinoscoop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trombinoscoop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/trombinoscoop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trombinoscoop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trombinoscoop/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +28,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;padeb185&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/padeb185/trombinoscoop&quot;,
+    &quot;accountId&quot;: &quot;6d78cb33-1960-4161-94e4-6eb5835d8363&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2twP7ERRS9P0ZOyJ1D56hYo8eL9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,11 +51,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Django Server.Trombinoscoop.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/pierr/PycharmProjects/Trombinoscoop/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,6 +67,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pierr\PycharmProjects\Trombinoscoop\templates" />
+      <recent name="C:\Users\pierr\PycharmProjects\Trombinoscoop\static\img" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Trombinoscoop" type="Python.DjangoServer" factoryName="Django server">
       <module name="Trombinoscoop" />
@@ -62,6 +81,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="trombinoscoop.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -96,11 +116,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741259993479</updated>
-      <workItem from="1741259994529" duration="675000" />
+      <workItem from="1741259994529" duration="1148000" />
+      <workItem from="1741261924260" duration="407000" />
+      <workItem from="1741262675200" duration="1152000" />
+      <workItem from="1741264036106" duration="884000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1741261003218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741261003218</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
